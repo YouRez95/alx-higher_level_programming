@@ -9,6 +9,8 @@ class Rectangle:
     """
     class to represent a Rectangle
     """
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """
         Contructor method for Rectangle
@@ -18,6 +20,7 @@ class Rectangle:
         """
         self.height = height
         self.width = width
+        Rectangle.number_of_instances += 1
 
     def area(self):
         """
@@ -106,4 +109,5 @@ class Rectangle:
         """
         delete instance
         """
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
