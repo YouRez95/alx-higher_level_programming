@@ -14,7 +14,7 @@ class Rectangle:
         Contructor method for Rectangle
         Args:
             width (int): width of rectangle
-            height (height): height for rectangle
+            height (int): height for rectangle
         """
         self.__height = height
         self.__width = width
@@ -26,7 +26,7 @@ class Rectangle:
         Returns:
             width
         """
-        return self.width
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -53,7 +53,7 @@ class Rectangle:
         Returns:
             height
         """
-        return self.height
+        return self.__height
 
     @height.setter
     def height(self, value):
