@@ -92,4 +92,6 @@ class Rectangle:
         """
         print our object
         """
+        if self.width == 0 or self.height == 0:
+            return ""
         return '\n'.join('#' * self.width for i in range(self.height))
