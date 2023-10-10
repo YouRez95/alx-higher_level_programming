@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-import json
+from json import dumps
 """ module """
 
 
 def to_json_string(my_obj):
     """ serialization """
-    json_string = json.dumps(my_obj)
+    json_string = dumps(my_obj)
     return json_string
