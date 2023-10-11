@@ -4,11 +4,13 @@
 
 def pascal_triangle(n):
     """ pascal triangle """
-    myList = [] 
-    if n <= 0:
-        return myList
-    for i in range(0, n):
-        prevList = []
-        if i == 0:
-            prevList.append(1)
-            myList.append(prevList)
+    if n == 1:
+        return [[1]]
+    else:
+        prev_pascal = pascal_triangle(n - 1)
+        row = [1]
+        for i in range(1, n-1):
+            row.append(prev_pascal[n - 2][i - 1] + prev_pascal[n - 2][i])
+        row.append(1)
+        prev_pascal.append(row)
+        return prev_pascal
