@@ -45,3 +45,12 @@ class Square(Rectangle):
             if i == 4:
                 self.y = arg
             i += 1
+
+    def to_dictionary(self):
+        """ attr to dict """
+        return {
+            "id": self.id,
+            "size": self.width,
+            "x": self.x,
+            "y": self.y
+        }
