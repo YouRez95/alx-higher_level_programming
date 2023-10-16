@@ -99,3 +99,13 @@ class Rectangle(Base):
             if i == 5:
                 self.y = arg
             i += 1
+
+    def to_dictionary(self):
+        """ attr to dict """
+        return {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
+        }
