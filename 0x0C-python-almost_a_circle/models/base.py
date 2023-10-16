@@ -42,3 +42,13 @@ class Base:
         file_name = "{}.json".format(cls.__name__)
         with open(file_name, 'w') as f:
             f.write(to_file)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ create an instance """
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 2)
+        if cls.__name__ == "Square":
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
