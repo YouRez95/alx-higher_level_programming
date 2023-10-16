@@ -23,6 +23,14 @@ class Base:
         json_string = json.dumps(list_dictionaries)
         return json_string
 
+    @staticmethod
+    def from_json_string(json_string):
+        """ to origin type """
+        if json_string is None:
+            return []
+        data = json.loads(json_string)
+        return data
+
     @classmethod
     def save_to_file(cls, list_objs):
         """ save to file """
