@@ -10,6 +10,8 @@ function secondBiggest (numbers) {
     if (parseInt(numbers[pointer]) > parseInt(bigg)) {
       secBigg = bigg;
       bigg = numbers[pointer];
+    } else if (parseInt(numbers[pointer]) > parseInt(secBigg)) {
+      secBigg = numbers[pointer];
     }
     pointer++;
   }
