@@ -1,4 +1,4 @@
-#!/usr/local/bin/node
+#!/usr/bin/node
 exports.add = (a, b) => {
   return a + b;
 };
