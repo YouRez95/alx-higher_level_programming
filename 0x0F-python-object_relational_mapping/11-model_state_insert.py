@@ -19,6 +19,3 @@ if __name__ == "__main__":
     session.add(state)
     session.commit()
     print(state.id)
-    results = session.query(State).all()
-    for r in results:
-        print(r)
