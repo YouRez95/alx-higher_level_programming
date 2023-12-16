@@ -21,6 +21,8 @@ if __name__ == "__main__":
           """
     sql.execute(query, (sys.argv[4],))
     result = sql.fetchall()
+    if len(result) == 0:
+        print("")
     for i in range(len(result)):
         if i != len(result) - 1:
             print(result[i][0], end=', ')
