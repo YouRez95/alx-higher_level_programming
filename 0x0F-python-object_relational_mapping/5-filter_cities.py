@@ -12,11 +12,12 @@ if __name__ == "__main__":
                          password=sys.argv[2], database=sys.argv[3])
     sql = db.cursor()
     query = """
-              SELECT DISTINCT c.name
+              SELECT DISTINCT c.name, c.id
               FROM cities c
               JOIN states s ON c.state_id = (
               SELECT id FROM states WHERE states.name = %s
               )
+              ORDER BY c.id
           """
     sql.execute(query, (sys.argv[4],))
     result = sql.fetchall()
