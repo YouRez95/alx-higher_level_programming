@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    results = session.query(State).limit(1).all()
+    results = session.query(State).limit(1)
     # print(results)
     if not results:
         print("Nothing")
