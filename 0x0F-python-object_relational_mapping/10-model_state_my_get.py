@@ -19,4 +19,4 @@ if __name__ == "__main__":
     if len(results) == 0:
         print("Not found")
     else:
-        print(str(results[0])[:1])
+        print(results[0].id)
