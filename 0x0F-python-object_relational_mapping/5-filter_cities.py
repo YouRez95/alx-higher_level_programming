@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-  dilter cities by state name
+  filter cities by state name
 """
 
 import MySQLdb
