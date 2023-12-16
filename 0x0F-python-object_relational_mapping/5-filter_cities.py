@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+  dilter cities by state name
+"""
 
 import MySQLdb
 import sys
