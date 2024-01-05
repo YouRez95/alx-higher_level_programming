@@ -13,6 +13,8 @@ def find_peak(myList):
         return None
     if len(myList) == 1:
         return myList[0]
+    if len(myList) == 2:
+        return max(myList[0], myList[1])
     med = int(len(myList) / 2)
     if myList[med] > myList[med-1] and myList[med] > myList[med+1]:
         return myList[med]
