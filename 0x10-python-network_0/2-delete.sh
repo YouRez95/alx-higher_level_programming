@@ -1,3 +1,3 @@
 #!/bin/bash
 # Delete request
-curl -X DELETE $1
+curl -Lfs -X DELETE $1
