@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-  module to send a request and get X-Request-Id header
+  module to send a request and get response
 """
 
 import sys
