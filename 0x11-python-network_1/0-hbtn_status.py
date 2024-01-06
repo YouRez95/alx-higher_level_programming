@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-from urllib import request
 """
   module to send a request and get some info
 """
 
+
+from urllib import request
 
 with request.urlopen('https://alx-intranet.hbtn.io/status') as response:
     peek = response.peek()
