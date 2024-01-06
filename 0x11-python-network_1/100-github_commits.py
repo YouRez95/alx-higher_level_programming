@@ -19,4 +19,4 @@ if __name__ == "__main__":
     response = response.json()
     for i in range(10):
         print("{}: {}".format(response[i]['sha'],
-              response[i]['commit']['author']['name']))
+              response[i]['commit']['committer']['name']))
