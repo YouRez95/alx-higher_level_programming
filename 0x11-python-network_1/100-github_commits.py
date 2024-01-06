@@ -16,7 +16,8 @@ if __name__ == "__main__":
     headers = {'Accept': 'application/vnd.github+json',
                'X-GitHub-Api-Version': '2022-11-28'}
     response = requests.get(url, headers=headers)
-    response = response.json()
-    for i in range(10):
-        print("{}: {}".format(response[i]['sha'],
-              response[i]['commit']['committer']['name']))
+    if response.status_code == 200:
+        response = response.json()
+        for i in range(10):
+            print("{}: {}".format(response[i]['sha'],
+                                  response[i]['commit']['author']['name']))
