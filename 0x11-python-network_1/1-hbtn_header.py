@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-import sys
-import urllib.request
 """
   module to send a request and get X-Request-Id header
 """
+
+import sys
+import urllib.request
 
 
 if __name__ == "__main__":
