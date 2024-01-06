@@ -12,7 +12,7 @@ if __name__ == "__main__":
     token = sys.argv[2]
 
     headers = {'Authorization': 'Bearer {}'.format(
-        token), 'X-GitHub-Api-Version': '2022-11-28'}
+        token)}
     url = "https://api.github.com/users/{}".format(username)
     response = requests.get(url, headers=headers)
-    print(response.headers.get('X-GitHub-Request-Id'))
+    print(response.json()['id'])
