@@ -8,17 +8,21 @@ import sys
 import requests
 
 if __name__ == "__main__":
-    if sys.argv[1]:
+    if len(sys.argv) > 1:
         query = {'q': sys.argv[1]}
     else:
         query = {'q': '""'}
 
-    r = requests.post("http://0.0.0.0:5000/search_user", query)
+    r = requests.post("http://localhost:5000/search_user", query)
+    result = ''
+    notValid = False
     try:
         result = r.json()
     except ValueError:
         print('Not a valid JSON')
-    if not result:
-        print('No result')
-    else:
-        print('[{}] {}'.format(result['id'], result['name']))
+        notValid = True
+    if notValid is False:
+        if not result:
+            print('No result')
+        else:
+            print('[{}] {}'.format(result['id'], result['name']))
