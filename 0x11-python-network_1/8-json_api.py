@@ -18,7 +18,7 @@ if __name__ == "__main__":
         result = r.json()
     except ValueError:
         print('Not a valid JSON')
-    if len(result) < 1:
+    if not result:
         print('No result')
     else:
         print('[{}] {}'.format(result['id'], result['name']))
