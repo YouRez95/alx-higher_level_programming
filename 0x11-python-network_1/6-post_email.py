@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-  module to send a request and get header
+  module to send a POST request and get response
 """
 
 
