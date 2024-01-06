@@ -18,8 +18,14 @@ if __name__ == "__main__":
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
         response = response.json()
-        for i in range(10):
-            print("{}: {}".format(response[i]['sha'],
-                                  response[i]['commit']['author']['name']))
+        if len(response) >= 10:
+            for i in range(10):
+                print("{}: {}".format(response[i]['sha'],
+                                      response[i]['commit']['author']['name']))
+
+        else:
+            for i in range(len(response)):
+                print("{}: {}".format(response[i]['sha'],
+                                      response[i]['commit']['author']['name']))
     else:
         print(None)
