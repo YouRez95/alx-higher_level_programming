@@ -11,7 +11,7 @@ if __name__ == "__main__":
     if sys.argv[1]:
         query = {'q': sys.argv[1]}
     else:
-        query = {'q': ""}
+        query = {'q': '""'}
 
     r = requests.post("http://0.0.0.0:5000/search_user", query)
     try:
