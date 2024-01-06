@@ -15,4 +15,7 @@ if __name__ == "__main__":
         token), 'X-GitHub-Api-Version': '2022-11-28'}
     url = "https://api.github.com/users/{}".format(username)
     response = requests.get(url, headers=headers)
-    print(response.json()['id'])
+    if response.status_code == 200:
+        print(response.json()['id'])
+    else:
+        print(None)
