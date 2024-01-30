@@ -1,4 +1,4 @@
-#!/Users/mac/.nvm/versions/node/v16.13.0/bin/node
+#!/usr/bin/node
 /**
  * make request and  computes the number of tasks completed by user id
  */
