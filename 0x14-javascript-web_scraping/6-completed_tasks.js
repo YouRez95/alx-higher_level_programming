@@ -10,14 +10,14 @@ request(url, (err, res, body) => {
   if (err) console.log(err);
   else {
     const response = JSON.parse(body);
-    if (response.length > 0) {
-      const completedTask = {};
-      for (const user of response) {
-        const userId = user.userId;
-        if (!(userId in completedTask)) completedTask[userId] = 0;
-        if (user.completed === true) completedTask[userId] += 1;
+    const completedTask = {};
+    for (const user of response) {
+      const userId = user.userId;
+      if (user.completed === true) {
+        if (!(userId in completedTask)) completedTask[userId] = 1;
+        else completedTask[userId] += 1;
       }
-      console.log(completedTask);
     }
+    console.log(completedTask);
   }
 });
