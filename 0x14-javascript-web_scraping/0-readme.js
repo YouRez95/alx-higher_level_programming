@@ -1,5 +1,6 @@
+#!/usr/bin/node
 /**
- * Read the content of a file
+ * Read the content of a file in asynchrounous way
  */
 const fs = require('fs');
 
